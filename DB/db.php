@@ -1,0 +1,57 @@
+<?php
+
+$dbhost = "localhost";
+$dbname = "test_saneto";
+$username = "root";
+$password = "";
+
+$db = new PDO("mysql:host=$dbhost; dbname=$dbname", $username, $password);
+
+// Получение всех статей
+function get_singles_all(){
+    global $db;
+    return $db->query("SELECT * FROM singles ORDER BY id DESC");
+}
+
+// Получение статьи по ее id
+function get_single_by_id($id){
+    global $db;
+    $singles = $db->query("SELECT * FROM singles WHERE id = $id");
+    foreach($singles as $single){
+        return $single;
+    }
+}
+
+// Получение названия категории
+function get_category_by_id($id){
+    global $db;
+    $categories = $db->query("SELECT * FROM categories WHERE id = $id");
+    foreach ($categories as $category){
+        return $category["category_name"];
+    }
+}
+
+// Получение имен авторов
+function get_authors_by_id($id){
+    global $db;
+    $authors = $db->query("SELECT * FROM authors WHERE id = $id");
+    foreach($authors as $author){
+        return $author["author_name"];
+    }
+}
+
+// Получение комментариев
+function get_comments_all(){
+    global $db;
+    $comments = $db->query("SELECT * FROM comments");
+        return $comments;
+}
+
+// Получение комментариев по id
+function get_comments_all_by_id($id){
+    global $db;
+    $comments = $db->query("SELECT * FROM comments WHERE id_comment = $id");
+    foreach($comments as $comment){
+        return $comment["comment_text"];
+    }
+}
