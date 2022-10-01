@@ -5,7 +5,7 @@
     <div class="wrap">
         <div class="about">
             <div class="bloder-content">
-                <?php $category = get_category_by_id('id'); ?>
+                <?php $category = get_category_by_id($_GET['id']); ?>
 
                 <h1>Статьи по категории "<?php echo $category; ?>"</h1>
             </div>
