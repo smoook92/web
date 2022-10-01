@@ -28,25 +28,14 @@
 								<li><a href="#"><span>Читать далее</span></a></li>
 							</ul>
 						</div>
-					</div>				
+					</div>
 					<div class="clear"> </div>
 					<div class="commentBlock">
 						<?php require "comments.php"; ?>
-						<h1>Коментарии к статье:</h1>
-						<!-- <h3>К этой статье пока никто не оставил комментарий.</h3> -->
-						<div class="comment">
-							<p class="sulez">
-							<img src="/include/img/user.png" ; alt="Фото пользователя"><strong>Сорин</strong>
-							</p>
-							<p class="commentText">Интересная статья</p>
-							<p class="sulez-2">
-								<span class="new">17-10-2022 в 23:00</span>
-							</p>
-						</div>
 					</div>
-				</div>	
+				</div>
 			</div>
-			</div>	
+			</div>
 <div class="clear"> </div>
 			<!-- End-content-gallery-->
 			<!-- DC Pagination:C9 Start -->
@@ -56,7 +45,7 @@
 		</div>
 	<?php require "include/footer.php"; ?>
 		<!-- End-wrap -->
-		
+
 	</body>
 </html>
 

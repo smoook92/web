@@ -46,15 +46,8 @@ function get_authors_by_id($id){
     }
 }
 
-// Получение комментариев
-function get_comments_all(){
-    global $db;
-    $comments = $db->query("SELECT * FROM comments");
-        return $comments;
-}
-
 // Получение комментариев по id
-function get_comments_all_by_id($id){
+function get_comments_by_id($id){
     global $db;
     $comments = $db->query("SELECT * FROM comments WHERE id_comment = $id");
     foreach($comments as $comment){
