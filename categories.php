@@ -16,6 +16,7 @@
 
 
                 <h1>Статьи по категории "<?php echo $category; ?>"</h1>
+
                 <div class="bloger-grid">
                     <div class="blog-img">
                         <a href="single?id=<?php echo $single["id"]; ?>"><img src="<?php echo $single["img"]; ?>" title="img6" /></a>
