@@ -22,10 +22,10 @@ function get_single_by_id($id){
     }
 }
 
+// Получение всех категорий
 function get_all_category(){
     global $db;
-    $categories = $db->query("SELECT * FROM categories");
-    return $categories;
+    return $db->query("SELECT * FROM categories");
 }
 
 // Получение названия категории для singles
