@@ -1,4 +1,4 @@
-<?php require "include/header.php"; ?>
+<?php require 'include/header.php'; ?>
 			<!-- End-Header-->
 			<div class="clear"> </div>
 			<!-- content-gallery-->

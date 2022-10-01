@@ -5,7 +5,7 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="../css/style.css" rel="stylesheet" type="text/css" media="all" />
     <title>Smoook BLOG</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link href='//fonts.googleapis.com/css?family=Carrois+Gothic+SC' rel='stylesheet' type='text/css'>
@@ -18,7 +18,7 @@
     <div class="wrap">
     <!-- Start-logo-->
     <div class="logo">
-        <a href="/"><img src="images/logo.png" title="logo" /></a>
+        <a href="/"><img src="../images/logo.png" title="logo" /></a>
     </div>				
     <!-- End-Logo-->
     <!-- Start-Header-nav-->				
@@ -37,11 +37,12 @@
         </ul>				
     <div class="search-bar">
         <ul>
-            <form action="../search" method="POST">
+            <form action="../search" method="GET">
                 <li><input name="search" type="text" placeholder=" Что ищем?"></li>
-                <li><form><input type="submit" value="" /></form></li>
+                <li><form><input type="submit" value="" name="button_search" /></form></li>
             </form>
         </ul>
     </div>
-    </div>				
+    </div>
+
 <!-- End-Header-->

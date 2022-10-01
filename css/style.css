@@ -699,7 +699,7 @@ ul.dc_paginationA03 li a:hover, ul.dc_paginationA03 li a.current {
 .services-sidebar li a {
 	color: #353333;
 	font-family: 'Carrois Gothic SC', sans-serif;
-	font-size: 12px;
+	font-size: 15px;
 	transition: all .5s;
 }
 .services-sidebar li a:hover{

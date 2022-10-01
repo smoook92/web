@@ -1,12 +1,13 @@
-    <?php require 'include/header.php'; ?>
-    <div class="clear"> </div>
+<?php require 'include/header.php'; ?>
+<div class="clear"> </div>
     <!-- content-gallery-->
     </div>
     <div class="wrap">
         <div class="about">
-            
             <div class="bloder-content">
-                <h1>Статьи по категории <?php echo $category["category_name"]; ?></h1>
+                <?php $category = get_category_by_id('id'); ?>
+
+                <h1>Статьи по категории "<?php echo $category; ?>"</h1>
             </div>
         </div>
     </div>
