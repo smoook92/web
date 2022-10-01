@@ -22,7 +22,13 @@ function get_single_by_id($id){
     }
 }
 
-// Получение названия категории
+function get_all_category(){
+    global $db;
+    $categories = $db->query("SELECT * FROM categories");
+    return $categories;
+}
+
+// Получение названия категории для singles
 function get_category_by_id($id){
     global $db;
     $categories = $db->query("SELECT * FROM categories WHERE id = $id");
