@@ -44,8 +44,3 @@
 	<!-- DC Pagination:C9 End -->
 		</div>
 	<?php require "include/footer.php"; ?>
-		<!-- End-wrap -->
-
-	</body>
-</html>
-

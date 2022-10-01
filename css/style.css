@@ -465,12 +465,11 @@ ul.dc_paginationA03 li a:hover, ul.dc_paginationA03 li a.current {
 .blog-img{
 	float: left;
 	cursor: pointer;
-	background: #fff;
+	background: #e1e1e1;
 	padding: 10px;
 	box-shadow: 0px 0px 10px rgb(223, 223, 223);
 	width: 42%;
 	border-radius: 10px;
-
 	display: inline-block; 
   	overflow: hidden; /* Скрываем всё за контуром */
 }
@@ -484,6 +483,7 @@ ul.dc_paginationA03 li a:hover, ul.dc_paginationA03 li a.current {
 }
 .bloder-content h1{
 	font-size: 40px; /*Размер текста на странице разной категории*/
+	margin-bottom: 20px;
 }
 .bloger-grid {
 	background-color: rgb(255, 255, 255);
@@ -869,6 +869,20 @@ form textarea{
 	padding: 10px 0px;
 }
 
+.commentBlock{
+	width: 100%;
+	padding: 25px;
+	background-color: rgb(255, 255, 255);
+	float: left;
+	box-sizing: border-box;
+	box-shadow: 0px 0px 10px rgb(223, 223, 223);
+	transition: 1s;
+	text-align: left;
+	border-radius: 10px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
 .commentBlock input{
 	display: inline-block;
 	margin: 10px auto;
@@ -882,7 +896,7 @@ form textarea{
 .commentBlock textarea {
 	display: inline-block;
 	margin: 10px auto;
-	border: 2px solid #eee;
+	border: 2px solid #ccc;
 	padding: 10px 20px;
 	font-family: Verdana, Arial, sans-serif;
 	font-size: 16px;
