@@ -38,7 +38,7 @@
     <div class="search-bar">
         <ul>
             <form action="../search" method="GET">
-                <li><input name="search" type="text" placeholder=" Что ищем?"></li>
+                <li><input name="search" type="text" placeholder=" Что ищем?" required></li>
                 <li><form><input type="submit" value="" name="button_search" /></form></li>
             </form>
         </ul>

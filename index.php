@@ -1,4 +1,5 @@
 <?php require 'include/header.php'; ?>
+
     <div class="clear"> </div>
     <!-- content-gallery-->
     </div>
