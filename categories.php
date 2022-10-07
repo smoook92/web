@@ -9,6 +9,7 @@
                 <?php require "category.php"; ?>
             </div>
             <div class="bloder-content">
+
                 <?php $single = get_single_by_id($_GET['id']); ?>
                 <?php $category = get_category_by_id($_GET['id']); ?>
                 <?php $author_name = get_authors_by_id($single["author_id"]); ?>
@@ -19,7 +20,7 @@
 
                 <div class="bloger-grid">
                     <div class="blog-img">
-                        <a href="single?id=<?php echo $single["id"]; ?>"><img src="<?php echo $single["img"]; ?>" title="img6" /></a>
+                        <a href="single?id=<?php echo $single["id"]; ?>"><img src="<?php echo $single["img"]; ?>" title="img6" alt=""/></a>
                     </div>
                     <div class="bloger-content">
                         <h5><a href="single?id=<?php echo $single["id"]; ?>"><?php echo $single["title"]; ?></a></h5>

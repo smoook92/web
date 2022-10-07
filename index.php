@@ -30,7 +30,7 @@
                             <li><a href="#">👤:</a></li>
                             <li><a href="#"><?php echo $author_name; ?></a></li><br />
                             <li><a href="#">Категория:</a></li>
-                            <li><a href="#"><?php echo $category_name; ?></a></li>
+                            <li><a href="categories?id=<?php echo $single['category_id']; ?>"><?php echo $category_name; ?></a></li>
                             <li><a href="single?id=<?php echo $single["id"]; ?>"><span>Читать далее</span></a></li>
                         </ul>
                     </div>
