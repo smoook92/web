@@ -43,8 +43,3 @@
     </div>
 <div class="clear"> </div>
     <?php require 'include/footer.php'; ?>
-    <!-- End-wrap -->
-
-</body>
-
-</html>

@@ -8,8 +8,6 @@
             <h1>Результаты по поиску: </h1>
             <div class="clear"> </div>
         </div>
-        </div>
-    </div>
     </div>
     <div class="clear"> </div>
     <!-- End-content-gallery-->
