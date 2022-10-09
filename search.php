@@ -17,10 +17,7 @@
                         if (!empty($search)){
                         echo "<br>Ваш запрос: ".$search. "<br>";
 
-                        $query = $db->query("SELECT * FROM `singles` WHERE `id`
-                                                        LIKE '%$search%' OR `name`
-                                                        LIKE '%$search%' OR `text`
-                                                        LIKE '%$search%'");
+                        $query = $db->query("SELECT * FROM `singles`");
 
                          if (mysqli_num_rows($query) > 0){
 
