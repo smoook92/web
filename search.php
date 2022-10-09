@@ -9,46 +9,47 @@
         <div class="bloder-content">
             <h1>Результаты поиска: </h1>
             <div class="clear"> </div>
-            <?php
-            function search($words){
-                $words = htmlspecialchars($words);
-                if ($words === "") return false;
-                $query_search = "";
+            <div class="bloger-grid">
+                <?php
+                    $search = $_POST['search'];
 
-                $arraywords = explode(" ", $words);
+                    if (isset($_POST['btn_search'])){
+                        if (!empty($search)){
+                        echo "<br>Ваш запрос: ".$search. "<br>";
 
-                    $query_search .= '`title` LIKE "%'.$words.'%" OR `text` LIKE "%'.$words.'%"';
+                        $query = $db->query("SELECT * FROM `singles` WHERE `id`
+                                                        LIKE '%$search%' OR `name`
+                                                        LIKE '%$search%' OR `text`
+                                                        LIKE '%$search%'");
 
+                         if (mysqli_num_rows($query) > 0){
 
-                $query = "SELECT * FROM singles WHERE $query_search";
-                $mysqli = new mysqli("localhost", "root", "", "test_saneto");
-                $result_set = $mysqli->query($query);
-                $mysqli->close();
-
-                $i = 0;
-                while($row = $result_set->fetch_assoc()){
-                    $results[$i] = $row;
-                    $i++;
-                }
-                $result_set->close();
-                return $results;
-            }
-
-            if (isset($_POST['bsearch'])){
-                $words = $_POST['words'];
-                $results = search($words);
-            }
-            ?>
-            <div class="clear"> </div>
-            <?php
-                if (isset($_POST['bsearch'])){
-                    if ($results === false) echo "Вы задали пустой запрос";
-                    if (count($results) == 0) echo "Ничего не найдено";
-                    else
-                        for ($i = 0; $i < count($results); $i++)
-                            echo $results[$i]["title"]."<br />";
-                }
-            ?>
+                        while ($result = mysqli_fetch_assoc($query)){
+                ?>
+                <div class="blog-img">
+                    <a href="single?id=<?php echo $single["id"]; ?>"><img src="<?php echo $single["img"]; ?>" title="img6" /></a>
+                </div>
+                <div class="bloger-content">
+                    <h5><a href="single?id=<?php echo $single["id"]; ?>"><?php echo $single["title"]; ?></a></h5>
+                    <p><?php echo $string = substr($single["text"], 0, 400); ?>...</p>
+                    <ul>
+                        <li><a href="#">📅</a></li>
+                        <li><a href="#"><?php echo date("d.m.Y", strtotime($single["date"])); ?></a></li><br />
+                        <li><a href="#">👤:</a></li>
+                        <li><a href="#"><?php echo $author_name; ?></a></li><br />
+                        <li><a href="#">Категория:</a></li>
+                        <li><a href="categories?id=<?php echo $single['category_id']; ?>"><?php echo $category_name; ?></a></li>
+                        <li><a href="single?id=<?php echo $single["id"]; ?>"><span>Читать далее</span></a></li>
+                    </ul>
+                </div>
+                <div class="clear"> </div>
+                            <?php }
+                        }else{
+                             echo "Записей по данному запросу не найдено!";
+                         }
+                        }
+                    } ?>
+            </div>
         </div>
     </div>
     <div class="clear"> </div>
@@ -58,4 +59,5 @@
         <div class="clear"> </div>
         <!-- DC Pagination:C9 End -->
     </div>
+
 <?php require "include/footer.php"; ?>
