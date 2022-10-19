@@ -1,4 +1,5 @@
 <?php require 'include/header.php'; ?>
+
 <div class="clear"> </div>
     <!-- content-gallery-->
     </div>
@@ -15,9 +16,7 @@
                 <?php $author_name = get_authors_by_id($single["author_id"]); ?>
                 <?php $category_name = get_category_by_id($single["category_id"]); ?>
 
-
                 <h1>Статьи по категории "<?php echo $category; ?>"</h1>
-
                 <div class="bloger-grid">
                     <div class="blog-img">
                         <a href="single?id=<?php echo $single["id"]; ?>"><img src="<?php echo $single["img"]; ?>" title="img6" alt=""/></a>

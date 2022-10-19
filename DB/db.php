@@ -1,11 +1,6 @@
 <?php
 
-$dbhost = "localhost";
-$dbname = "test_saneto";
-$username = "root";
-$password = "";
-
-$db = new PDO("mysql:host=$dbhost; dbname=$dbname", $username, $password);
+$db = new mysqli('localhost', 'root', '', 'test_saneto');
 
 // Получение всех статей
 function get_singles_all(){
